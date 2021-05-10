@@ -20,7 +20,6 @@ public class Customer {
     }
 
     public String statement() {
-//        double totalAmount = 0;
         Enumeration rentals = this.rentals.elements();
         String stmt = "Rental Record for " + this.getName() + "\n";
         stmt = stmt + "\t" + "Title" + "\t" + "\t" + "Days" + "\t" + "Amount" + "\n";

@@ -36,6 +36,20 @@ public class Customer {
         return stmt;
     }
 
+    public String htmlStatement() {
+        Enumeration rentals = this.rentals.elements();
+        String completeHtmlStatement = "<H1>Rentals for <EM>" + getName() + "</EM></ H1><P>\n";
+        while (rentals.hasMoreElements()) {
+            Rental each = (Rental) rentals.nextElement();
+            //show figures for each rental
+            completeHtmlStatement += each.getMovie().getTitle() + ": " + (each.getCharge()) + "<BR>\n";
+        }
+        //add footer lines
+        completeHtmlStatement += "<P>You owe <EM>" + getTotalCharge() + "</EM><P>\n";
+        completeHtmlStatement += "On this rental you earned <EM>" + getTotalFrequentRenterPoints() + "</EM> frequent renter points<P>";
+        return completeHtmlStatement;
+    }
+
 //    It is worth stopping to think a bit about the last refactoring. Most refactorings reduce the amount
 //    of code, but this one increases it. That's because Java 1.1 requires a lot of statements to set up a
 //    summing loop. Even a simple summing loop with one line of code per element needs six lines of

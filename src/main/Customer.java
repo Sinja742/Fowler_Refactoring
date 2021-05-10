@@ -24,19 +24,19 @@ public class Customer {
     public String statement() {
         double totalAmount = 0;
         Enumeration rentals = this.rentals.elements();
-        String result = "Rental Record for " + this.getName() + "\n";
-        result = result + "\t" + "Title" + "\t" + "\t" + "Days" + "\t" + "Amount" + "\n";
+        String stmt = "Rental Record for " + this.getName() + "\n";
+        stmt = stmt + "\t" + "Title" + "\t" + "\t" + "Days" + "\t" + "Amount" + "\n";
 
         while (rentals.hasMoreElements()) {
             Rental each = (Rental) rentals.nextElement();
             //determine amounts for each line
             //show figures for this rental
-            result = result + "\t" + each.getMovie().getTitle() + "\t" + "\t" + each.getDaysRented() + "\t" + String.valueOf(each.getCharge()) + "\n";
+            stmt = stmt + "\t" + each.getMovie().getTitle() + "\t" + "\t" + each.getDaysRented() + "\t" + String.valueOf(each.getCharge()) + "\n";
         }
         //add footer lines
-        result = result + "Amount owed is " + String.valueOf(getTotalCharge()) + "\n";
-        result = result + "You earned " + String.valueOf(getTotalFrequentRenterPoints()) + " frequent renter points";
-        return result;
+        stmt = stmt + "Amount owed is " + String.valueOf(getTotalCharge()) + "\n";
+        stmt = stmt + "You earned " + String.valueOf(getTotalFrequentRenterPoints()) + " frequent renter points";
+        return stmt;
     }
 
 //    It is worth stopping to think a bit about the last refactoring. Most refactorings reduce the amount

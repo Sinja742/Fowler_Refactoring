@@ -2,17 +2,17 @@ class Rental {
     private Movie movie;
     private int daysRented;
 
-    public Rental(Movie newmovie, int newdaysRented) {
-        movie = newmovie;
-        daysRented = newdaysRented;
+    public Rental(Movie movie, int daysRented) {
+        this.movie = movie;
+        this.daysRented = daysRented;
     }
 
     public int getDaysRented() {
-        return daysRented;
+        return this.daysRented;
     }
 
     public Movie getMovie() {
-        return movie;
+        return this.movie;
     }
 
     public double getCharge() {

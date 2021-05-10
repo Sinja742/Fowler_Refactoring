@@ -1,9 +1,9 @@
 package main;
 
 public interface Price {
-    abstract int getPriceCode();
+    int getPriceCode();
 
-    abstract double getCharge(int daysRented);
+    double getCharge(int daysRented);
 
-    abstract int getFrequentRenterPoints(int daysRented);
+    int getFrequentRenterPoints(int daysRented);
 }

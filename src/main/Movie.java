@@ -1,3 +1,9 @@
+package main;
+
+import main.NewReleasePrice;
+import main.Price;
+import main.RegularPrice;
+
 public class Movie {
     public static final int CHILDRENS = 2;
     public static final int REGULAR = 0;
@@ -9,7 +15,7 @@ public class Movie {
 
     public Movie(String title, int priceCode) {
         this.title = title;
-//        setPriceCode(priceCode);
+        setPriceCode(priceCode);
         this.priceCode = priceCode;
     }
 
@@ -29,7 +35,7 @@ public class Movie {
                 price = new NewReleasePrice();
                 break;
             default:
-                throw new IllegalArgumentException("Incorrect Price Code");
+                throw new IllegalArgumentException("Incorrect main.Price Code");
         }
     }
 

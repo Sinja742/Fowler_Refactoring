@@ -1,3 +1,8 @@
+package main;
+
+import main.Movie;
+import main.Price;
+
 public class ChildrensPrice implements Price {
 
 

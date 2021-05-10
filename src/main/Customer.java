@@ -1,8 +1,11 @@
+package main;
+
+import main.Rental;
 
 import java.lang.*;
 import java.util.*;
 
-class Customer {
+public class Customer {
     private String name;
     private Vector rentals = new Vector();
 
@@ -19,7 +22,7 @@ class Customer {
     }
 
     public String statement() {
-//        double totalAmount = 0;
+        double totalAmount = 0;
         Enumeration rentals = this.rentals.elements();
         String result = "Rental Record for " + this.getName() + "\n";
         result = result + "\t" + "Title" + "\t" + "\t" + "Days" + "\t" + "Amount" + "\n";

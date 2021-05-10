@@ -1,3 +1,5 @@
+package main;
+
 public class RegularPrice implements Price {
     public int getPriceCode(){
         return Movie.REGULAR;
